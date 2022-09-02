@@ -5,85 +5,93 @@
     --borderRadius: 10px;
 }
 
-* {
-
-}
-
 body {
     background-color: var(--backgroundColor);
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
 }
 
-p {
+header {
+    text-align: center;
+}
+
+.page-title{
     color: var(--containerColor);
+    font-size: 65px;
+    margin: 25px 0;  
+    line-height: 65px;
 }
 
-h1 {
-    font-size: 300%;
+header p {
+    margin: 0 auto 50px ;
+    max-width: 1000px;
+}
+
+.row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 24px;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2%;
 }
 
-h1, h2, h3 .card-body{
-    color: var(--containerColor);
-}
-
-header p, .code-block {
-    color: var(--textColor);
-    font-size: 150%;
-    display: flex;
+.justify-center {
     justify-content: center;
-    align-items: center;
-    margin: 20px;
 }
 
 .card-column {
-    display: inline-flex;
-    flex-wrap: row wrap;
-    justify-content: space-evenly;
-    border: dashed var(--textColor);
-    height: 300px;
-    margin: 20px;
-    height: 300px;
-    max-width: 100%;
+    width: 31%;
+    background-color: var(--backgroundColor);
+    margin-bottom: 50px;
 }
 
-.card-header {
-    font-size: 250%;
+.card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    border: 2px dashed var(--textColor);
+    padding: 20px;
     position: relative;
-    border: solid var(--textColor);
+    height: 100%;
+}
+
+.card h2, .card p {
+    color: var(--containerColor);
+}
+
+.card h2 {
+    font-size: 36px;
+    border: 2px solid var(--textColor);
+    padding: 15px;
     border-radius: var(--borderRadius);
+    position: absolute;
+    top: -34px;
+    background-color: var(--backgroundColor);
+    width: 90%;
+}
+
+.card p {
+    margin-top: 25px;
 }
 
 .code-block {
-    background-color: var(--containerColor);
+    background: linear-gradient(rgb(120, 35, 128), var(--containerColor));
     border-radius: var(--borderRadius);
-    display: flex;
-    height: 200px;
-    width: 400px;
-    
+    padding: 15px;
+    white-space: pre-wrap;
+    flex: 1;
 }
 
-.linear-gradient-background {
-    background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
-      );
+@media (max-width: 1550px) {
+    .card-column {
+        width: 48%;
     }
-
-.code-card .card-header {
-    border-radius: 8px;
-    transition: all 0.5s ease-in-out;
 }
 
-.code-card .card-header {
-    border-radius: 8px;
-    transition: all 0.5s ease-in-out;
-}
-
-@media screen and (max-width: 992px) {
-
+@media (max-width: 930px) {
+    body {
+        padding: 15px;
+    }
+    .card-column {
+        width: 100%;
+    }
 }
