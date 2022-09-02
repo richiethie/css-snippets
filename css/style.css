@@ -81,6 +81,15 @@ header p {
     flex: 1;
 }
 
+footer {
+    color: var(--containerColor);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
 @media (max-width: 1550px) {
     .card-column {
         width: 48%;
